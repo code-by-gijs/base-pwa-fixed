@@ -17,6 +17,8 @@ body {
     font-family: var(--font-body);
     color: var(--font-color);
     background-color: var(--background-color);
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
 }
 
 html, body, #root {
@@ -25,9 +27,13 @@ html, body, #root {
     margin: 0;
 }
 
-#root {
-    overflow: auto;
+body {
+    overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
+}
+
+#root {
+    z-index: 0;
 }
 
 #root, section, main, nav {
@@ -45,7 +51,6 @@ html, body, #root {
     flex-direction: column;
     flex-grow: 1;
     min-height: 100%;
-    overflow: hidden;
 }
 
 .main {
@@ -55,7 +60,9 @@ html, body, #root {
     z-index: 2;
 }
 
-.nav {}
+.nav {
+    
+}
 .nav-push {
     flex-basis: 75px;
 }
