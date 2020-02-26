@@ -76,16 +76,6 @@
 
     <script>
         window.mySwipe = Swipe(document.getElementById('slider'));
-
-        document.getElementById('root').addEventListener('scroll', function(e) {
-            var nav = document.getElementById('nav');
-            if (e.target.scrollTop > 90) {
-                nav.classList.add('nav-shadow');
-            } else {
-                nav.classList.remove('nav-shadow');
-            }
-
-        });
     </script>
 </body>
 
