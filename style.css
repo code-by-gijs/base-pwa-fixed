@@ -1,7 +1,11 @@
 :root {
     --background-color: rgb(25, 124, 103);
+    --background-color-nav: rgb(47, 163, 138);
     --font-color: rgb(25, 124, 103);
     --font-body: Verdana, Geneva, Tahoma, sans-serif;
+    --hero-height: 150px;
+    --nav-height: 75px;
+    --bottom-nav-height: 75px;
 }
 
 * {
@@ -25,11 +29,6 @@ html, body, #root {
     height: 100%;
     padding: 0;
     margin: 0;
-}
-
-body {
-    overflow-y: scroll;
-    -webkit-overflow-scrolling: touch;
 }
 
 #root {
@@ -60,55 +59,50 @@ body {
     z-index: 2;
 }
 
-.nav {
-    
+.nav-inner, .hero-inner, .bottom-nav-inner {
+    color: white;
+    font-size: 1.5em;
+    text-align: center;
+    background-color: var(--background-color);
 }
+
+.nav {}
 .nav-push {
-    flex-basis: 75px;
+    flex-basis: var(--nav-height);
 }
 .nav-inner {
     position: fixed;
     top: 0;
     z-index: 3;
+    height: var(--nav-height);
     width: 100%;
     padding: 1.3rem 0 0;
-    align-items: center;
-    background-color: var(--background-color);
-    transition: height .2s ease-in-out;
-    color: white;
-    font-size: 1.5em;
-    text-align: center;
-    height: 75px;
-}
-.nav-shadow {
-    box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.24);
+    background-color: var(--background-color-nav);
 }
 
 .hero {}
 .hero-push {
-    flex-basis: 150px;
+    flex-basis: var(--hero-height);
 }
 .hero-inner {
     position: fixed;
-    padding: 2rem 0rem;
     z-index: 1;
-    text-align: center;
-    font-size: 2em;
-    color: white;
     width: 100%;
+    padding: 2rem 0rem;
+    font-size: 2em;
+    height: var(--hero-height);
+    background-color: var(--background-color-hero);
 }
 
-.swipe {
-    overflow: hidden;
-    visibility: hidden;
-    position: relative;
+.bottom-nav {}
+.bottom-nav-push {
+    flex-basis: var(--bottom-nav-height);
 }
-.swipe-wrap {
-    overflow: hidden;
-    position: relative;
-}
-.swipe-wrap > div {
-    float:left;
-    width:100%;
-    position: relative;
+.bottom-nav-inner {
+    position: fixed;
+    bottom: 0;
+    z-index: 3;
+    height: var(--bottom-nav-height);
+    width: 100%;
+    padding: 1.3rem 0 0;
 }
